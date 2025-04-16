@@ -1,0 +1,85 @@
+.table-active{
+  font-family: Helvetica;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.table-active thead tr{
+  background-color: #ff5a5a;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-active tfoot{
+  font-weight: bold;
+}
+
+.table-active th,
+.table-active td {
+  padding: 12px 15px;
+}
+
+.table-active tbody tr {
+  border-bottom: 1px solid #dddddd;
+  font-weight: 500;
+  color: hsl(0, 0%, 30%);
+}
+
+.table-active tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table-active tbody tr:last-of-type {
+  border-bottom: 2px solid #ff5a5a;
+}
+
+.form-feild{
+  font-weight: bold;
+  overflow: hidden;
+  font-family: Helvetica;
+  border: 2px solid #ff5a5a;
+  border-radius: 5px;
+  padding: 12px 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: 
+    'n nip'
+    'p pip'
+    'q qip'
+    's s';
+  gap: 10px;
+}
+
+.form-feild button{
+  font-weight: bold;
+  padding: 10px 12px;
+  border: none;
+  background-color: #ff5a55;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.form-feild label{
+  padding: 5px 0;
+  border-right: 2px solid #dddddd;
+}
+
+.form-feild input{
+  font-weight: bold;
+}
+
+#name{grid-area: n;}
+#price{grid-area: p;}
+#qt{grid-area: q;}
+#name-input{grid-area: nip;}
+#price-input{grid-area: pip;}
+#qt-input{grid-area: qip;}
+#sub{grid-area: s;}
