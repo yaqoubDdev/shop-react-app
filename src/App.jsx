@@ -59,9 +59,9 @@ function Table({products}){
         <tr>
           <th>No.</th>
           <th>Name</th>
-          <th>Price</th>
-          <th>Qt</th>
-          <th>Total</th>
+          <th align="right">Price</th>
+          <th align="right">Qt</th>
+          <th align="right">Total</th>
         </tr>
       </thead>
       
@@ -70,9 +70,9 @@ function Table({products}){
           <tr key={index}>
             <td>{index+1}</td>
             <td>{name}</td>
-            <td>{price}</td>
-            <td>{qt}</td>
-            <td>{price * qt}</td>
+            <td align="right">{price.toLocaleString()}</td>
+            <td align="right">{qt.toLocaleString()}</td>
+            <td align="right">{(price * qt).toLocaleString()}</td>
           </tr>
         ))}
       </tbody>
@@ -80,7 +80,7 @@ function Table({products}){
       <tfoot>
         <tr>
           <td colspan={4}>Total</td>
-          <td>{total}</td>
+          <td align="right">{total.toLocaleString()}</td>
         </tr>
       </tfoot>
     </table>
