@@ -1,16 +1,151 @@
 {
-  "people": [
+  "products": [
     {
-      "name": "yakub",
-      "age": "20"
+      "id": "c614",
+      "date": "21/3/2025 -- 1:22:48",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
     },
     {
-      "name": "yakub",
-      "age": "20"
+      "id": "945b",
+      "date": "21/3/2025 -- 1:23:22",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
     },
     {
-      "name": "yakub",
-      "age": "20"
+      "id": "bccc",
+      "date": "21/3/2025 -- 1:23:23",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
+    },
+    {
+      "id": "05ee",
+      "date": "21/3/2025 -- 1:23:24",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
+    },
+    {
+      "id": "6383",
+      "date": "21/3/2025 -- 1:27:2",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
+    },
+    {
+      "id": "e700",
+      "date": "21/3/2025 -- 1:27:4",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
+    },
+    {
+      "id": "9906",
+      "date": "21/3/2025 -- 1:27:7",
+      "data": [
+        {
+          "name": "fui",
+          "price": 20,
+          "qt": 20
+        },
+        {
+          "name": "ioef ",
+          "price": 760,
+          "qt": 10
+        },
+        {
+          "name": "ewweiiweiri salt",
+          "price": 110,
+          "qt": 20
+        }
+      ]
     }
   ]
 }

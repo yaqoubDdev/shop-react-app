@@ -1,12 +1,41 @@
 .table-active{
   font-family: Helvetica;
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 25px 0 0px 0;
   font-size: 0.9em;
   min-width: 400px;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.controls-table{
+  padding: 12px 15px;
+  display: inline-flex;
+  min-width: calc(400px - 34px);
+  justify-content: space-around;
+  /* border: 2px solid #ff5a5a ; */
+  border-bottom: 2px solid #ff5a5a;
+  
+}
+
+.controls-table button{
+  font-family: Helvetica;
+  font-size: large;
+  border: none;
+  padding: 5px 8px;
+  background-color: hsl(0, 100%, 68%);
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.controls-table button:hover{
+  background-color: hsl(0, 100%, 58%);
+}
+
+.controls-table button:active{
+  background-color: hsl(0, 100%, 48%);
+  
 }
 
 .table-active thead tr{
@@ -40,6 +69,7 @@
 }
 
 .form-feild{
+  width: calc(400px - 30px);
   font-weight: bold;
   overflow: hidden;
   font-family: Helvetica;
