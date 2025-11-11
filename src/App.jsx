@@ -27,23 +27,13 @@ function ProdForm(props) {
   )
 }
 
-function Debug({ name, price, qt }) {
-
-  return (
-    <>
-      <p>name: {name} </p>
-      <p>price: {price} </p>
-      <p>qt: {qt} </p>
-    </>
-  )
-}
-
-
-function Table({ products, clear, add }) {
+function Table({ products, clear, add, label, handleLabel }) {
 
   if (products.length == 0) {
     return (
-      <h4>No data</h4>
+      <div className="no-data-container">
+        <h4 className="no-data-message">No data</h4>
+      </div>
     )
   }
 
@@ -87,14 +77,26 @@ function Table({ products, clear, add }) {
         </tfoot>
       </table>
       <div className='controls-table'>
-        <button onClick={clear}>clear</button>
-        <button onClick={add}>submit</button>
+        <div className='label-input-container'>
+          <label htmlFor="table-label">Table Label: </label>
+          <input 
+            type="text" 
+            id="table-label" 
+            value={label} 
+            onChange={handleLabel}
+            placeholder="Enter table name (optional)"
+          />
+        </div>
+        <div className='table-buttons'>
+          <button onClick={clear}>clear</button>
+          <button onClick={add}>submit</button>
+        </div>
       </div>
     </>
   )
 }
 
-function ProdTable({products, date}){
+function ProdTable({products, date, label}){
 
   let total = 0
   if (products.length >= 1) {
@@ -102,14 +104,23 @@ function ProdTable({products, date}){
     total = ss.reduce((acc, e) => acc + e)
   }
 
+  // Display label if provided, otherwise show date
+  const displayTitle = label && label.trim() !== '' ? label : date
 
   return (
     <>
       <table className="table-active">
         <thead>
           <tr>
-            <th colSpan={5} align='center'>{date}</th>
+            <th colSpan={5} align='center'>{displayTitle}</th>
           </tr>
+          {label && label.trim() !== '' && (
+            <tr>
+              <th colSpan={5} align='center' style={{fontSize: '0.85em', fontWeight: 'normal', fontStyle: 'italic'}}>
+                {date}
+              </th>
+            </tr>
+          )}
           <tr>
             <th>No.</th>
             <th>Name</th>
@@ -146,14 +157,19 @@ function AllProdTable({ allProducts}) {
 
   if (allProducts.length == 0) {
     return (
-      <h4>No data</h4>
+      <div className="no-data-container">
+        <h4 className="no-data-message">No data</h4>
+      </div>
     )
   }
   
+  // Reverse array to show recent orders first (newest to oldest)
+  const reversedProducts = [...allProducts].reverse()
+  
   return(
     <>
-      {allProducts.map(({data, date, id}) => (
-        <ProdTable products={data} key={id} date={date} />
+      {reversedProducts.map(({data, date, id, label}) => (
+        <ProdTable products={data} key={id} date={date} label={label} />
       ))}
     </>
   )
@@ -162,26 +178,11 @@ function AllProdTable({ allProducts}) {
 
 function App() {
   const [allProd, setAllProd] = useState([])
-  const [products, setProducts] = useState([
-    {
-      name: "fui",
-      price: 20,
-      qt: 20
-    },
-    {
-      name: "ioef ",
-      price: 760,
-      qt: 10
-    },
-    {
-      name: "ewweiiweiri salt",
-      price: 110,
-      qt: 20
-    }
-  ])
+  const [products, setProducts] = useState([])
   const [name, setName] = useState("")
   const [price, setPrice] = useState("")
   const [qt, setQt] = useState("")
+  const [tableLabel, setTableLabel] = useState("")
 
   useEffect(() => {
     prodService.getAll()
@@ -201,8 +202,12 @@ function App() {
   function handleQt(e) {
     setQt(e.target.value)
   }
+  function handleTableLabel(e) {
+    setTableLabel(e.target.value)
+  }
   function clearProd(){
     setProducts([])
+    setTableLabel("")
   }
 
   function handleSubmit(event) {
@@ -220,19 +225,27 @@ function App() {
   }
 
   function addToAllProd(){
-    console.log(Array(products));
+    if (products.length === 0) {
+      alert("Add products first")
+      return
+    }
+    
     const date = new Date()
     const p = {
-      date: String(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()} -- ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`),
+      date: String(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} -- ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`),
+      label: tableLabel.trim(),
       data: products
     }
     
     prodService.create(p)
       .then(data => {
-        console.log(data);
-        
         setAllProd(ap => [...ap, data])
-        // setProducts([])
+        setProducts([])
+        setTableLabel("")
+      })
+      .catch(error => {
+        console.error("Error saving products:", error)
+        alert("Error saving products. Please try again.")
       })
   }
 
@@ -249,7 +262,13 @@ function App() {
 
       />
 
-      <Table products={products} clear={clearProd} add={addToAllProd} />
+      <Table 
+        products={products} 
+        clear={clearProd} 
+        add={addToAllProd}
+        label={tableLabel}
+        handleLabel={handleTableLabel}
+      />
 
       <AllProdTable allProducts={allProd} />
     </>

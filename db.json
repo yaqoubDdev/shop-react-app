@@ -1,149 +1,143 @@
 {
   "products": [
     {
-      "id": "c614",
-      "date": "21/3/2025 -- 1:22:48",
+      "id": "a1b2",
+      "date": "15/1/2025 -- 10:30:45",
+      "label": "Morning Sales",
       "data": [
         {
-          "name": "fui",
-          "price": 20,
-          "qt": 20
-        },
-        {
-          "name": "ioef ",
-          "price": 760,
+          "name": "Sugar",
+          "price": 25,
           "qt": 10
         },
         {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
+          "name": "Rice",
+          "price": 45,
+          "qt": 5
+        },
+        {
+          "name": "Cooking Oil",
+          "price": 120,
+          "qt": 3
         }
       ]
     },
     {
-      "id": "945b",
-      "date": "21/3/2025 -- 1:23:22",
+      "id": "c3d4",
+      "date": "15/1/2025 -- 14:22:18",
+      "label": "Afternoon Orders",
       "data": [
         {
-          "name": "fui",
-          "price": 20,
+          "name": "Flour",
+          "price": 35,
+          "qt": 8
+        },
+        {
+          "name": "Salt",
+          "price": 15,
           "qt": 20
         },
         {
-          "name": "ioef ",
-          "price": 760,
-          "qt": 10
+          "name": "Tomatoes",
+          "price": 40,
+          "qt": 6
         },
         {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
+          "name": "Onions",
+          "price": 30,
+          "qt": 4
         }
       ]
     },
     {
-      "id": "bccc",
-      "date": "21/3/2025 -- 1:23:23",
+      "id": "e5f6",
+      "date": "15/1/2025 -- 16:45:33",
+      "label": "",
       "data": [
         {
-          "name": "fui",
+          "name": "Milk",
+          "price": 55,
+          "qt": 12
+        },
+        {
+          "name": "Bread",
           "price": 20,
-          "qt": 20
-        },
-        {
-          "name": "ioef ",
-          "price": 760,
-          "qt": 10
-        },
-        {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
+          "qt": 15
         }
       ]
     },
     {
-      "id": "05ee",
-      "date": "21/3/2025 -- 1:23:24",
+      "id": "g7h8",
+      "date": "16/1/2025 -- 9:15:12",
+      "label": "Weekend Special",
       "data": [
         {
-          "name": "fui",
-          "price": 20,
-          "qt": 20
+          "name": "Chicken",
+          "price": 180,
+          "qt": 2
         },
         {
-          "name": "ioef ",
-          "price": 760,
-          "qt": 10
+          "name": "Beef",
+          "price": 250,
+          "qt": 1
         },
         {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
+          "name": "Fish",
+          "price": 150,
+          "qt": 3
+        },
+        {
+          "name": "Spices Mix",
+          "price": 75,
+          "qt": 5
         }
       ]
     },
     {
-      "id": "6383",
-      "date": "21/3/2025 -- 1:27:2",
+      "id": "i9j0",
+      "date": "16/1/2025 -- 11:30:55",
       "data": [
         {
-          "name": "fui",
-          "price": 20,
-          "qt": 20
+          "name": "Tea",
+          "price": 60,
+          "qt": 7
         },
         {
-          "name": "ioef ",
-          "price": 760,
+          "name": "Coffee",
+          "price": 85,
+          "qt": 4
+        },
+        {
+          "name": "Sugar",
+          "price": 25,
           "qt": 10
-        },
-        {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
         }
       ]
     },
     {
-      "id": "e700",
-      "date": "21/3/2025 -- 1:27:4",
+      "id": "k1l2",
+      "date": "16/1/2025 -- 13:20:40",
+      "label": "Bulk Order",
       "data": [
         {
-          "name": "fui",
-          "price": 20,
+          "name": "Rice",
+          "price": 45,
+          "qt": 50
+        },
+        {
+          "name": "Flour",
+          "price": 35,
+          "qt": 30
+        },
+        {
+          "name": "Cooking Oil",
+          "price": 120,
           "qt": 20
         },
         {
-          "name": "ioef ",
-          "price": 760,
-          "qt": 10
-        },
-        {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
-        }
-      ]
-    },
-    {
-      "id": "9906",
-      "date": "21/3/2025 -- 1:27:7",
-      "data": [
-        {
-          "name": "fui",
-          "price": 20,
-          "qt": 20
-        },
-        {
-          "name": "ioef ",
-          "price": 760,
-          "qt": 10
-        },
-        {
-          "name": "ewweiiweiri salt",
-          "price": 110,
-          "qt": 20
+          "name": "Salt",
+          "price": 15,
+          "qt": 100
         }
       ]
     }

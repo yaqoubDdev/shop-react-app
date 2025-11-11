@@ -11,12 +11,48 @@
 
 .controls-table{
   padding: 12px 15px;
-  display: inline-flex;
-  min-width: calc(400px - 34px);
-  justify-content: space-around;
-  /* border: 2px solid #ff5a5a ; */
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 12px;
+  margin-top: 15px;
   border-bottom: 2px solid #ff5a5a;
-  
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.label-input-container{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Helvetica;
+}
+
+.label-input-container label{
+  font-weight: bold;
+  font-size: 0.9em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.label-input-container input{
+  width: 200px;
+  padding: 6px 10px;
+  border: 2px solid #dddddd;
+  border-radius: 4px;
+  font-family: Helvetica;
+  font-size: 0.9em;
+}
+
+.label-input-container input:focus{
+  outline: none;
+  border-color: #ff5a5a;
+}
+
+.table-buttons{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
 }
 
 .controls-table button{
@@ -27,6 +63,7 @@
   background-color: hsl(0, 100%, 68%);
   border-radius: 5px;
   color: #ffffff;
+  flex: 1;
 }
 
 .controls-table button:hover{
@@ -113,3 +150,24 @@
 #price-input{grid-area: pip;}
 #qt-input{grid-area: qip;}
 #sub{grid-area: s;}
+
+.no-data-container{
+  width: 400px;
+  margin: 25px 0 0px 0;
+  padding: 40px 20px;
+  background-color: #fafafa;
+  border: 2px solid #ff5a5a;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.no-data-message{
+  font-family: Helvetica;
+  font-size: 1.1em;
+  color: hsl(0, 0%, 40%);
+  font-weight: 500;
+  margin: 0;
+  font-style: italic;
+}
