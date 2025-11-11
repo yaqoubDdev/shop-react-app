@@ -7,6 +7,7 @@
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .controls-table{
@@ -170,4 +171,262 @@
   font-weight: 500;
   margin: 0;
   font-style: italic;
+}
+
+/* App Container */
+.app-container{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Desktop: Show both sections side by side */
+@media screen and (min-width: 769px) {
+  .app-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .form-section,
+  .history-section {
+    display: block !important;
+  }
+}
+
+/* Wide screens: Two-column layout */
+@media screen and (min-width: 1024px) {
+  .app-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .form-section{
+    flex: 0 0 420px;
+    width: 420px;
+    max-width: 420px;
+    min-width: 420px;
+    position: sticky;
+    top: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .history-section{
+    flex: 0 1 700px;
+    min-width: 0;
+    max-width: 500px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 50px;
+  }
+
+  .history-section > * {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-section .table-active{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .form-section .controls-table{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-section .form-feild{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-section .no-data-container{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .history-section .table-active{
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+    font-size: 0.8em;
+    box-sizing: border-box;
+  }
+
+  .history-section .table-active th,
+  .history-section .table-active td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 6px 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+
+  .history-section .table-active colgroup,
+  .history-section .table-active col {
+    width: auto;
+  }
+
+  .history-section .table-active th:first-child,
+  .history-section .table-active td:first-child {
+    width: 8%;
+    min-width: 40px;
+  }
+
+  .history-section .table-active th:nth-child(2),
+  .history-section .table-active td:nth-child(2) {
+    width: 35%;
+    min-width: 100px;
+  }
+
+  .history-section .table-active th:nth-child(3),
+  .history-section .table-active td:nth-child(3) {
+    width: 18%;
+    min-width: 60px;
+  }
+
+  .history-section .table-active th:nth-child(4),
+  .history-section .table-active td:nth-child(4) {
+    width: 18%;
+    min-width: 60px;
+  }
+
+  .history-section .table-active th:nth-child(5),
+  .history-section .table-active td:nth-child(5) {
+    width: 21%;
+    min-width: 70px;
+  }
+
+  .history-section .no-data-container{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* View Toggle Button */
+.view-toggle-btn{
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 12px 20px;
+  font-family: Helvetica;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid #ff5a5a;
+  border-radius: 5px;
+  background-color: #ff5a5a;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.view-toggle-btn:hover{
+  background-color: hsl(0, 100%, 58%);
+  border-color: hsl(0, 100%, 58%);
+}
+
+.view-toggle-btn:active{
+  background-color: hsl(0, 100%, 48%);
+  transform: translateY(1px);
+}
+
+/* Form and History Sections */
+.form-section,
+.history-section{
+  transition: opacity 0.3s ease;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .app-container{
+    padding: 0 15px;
+  }
+
+  .view-toggle-btn{
+    display: block;
+    margin: 15px auto;
+  }
+
+  .form-section.hidden-mobile,
+  .history-section.hidden-mobile{
+    display: none;
+  }
+
+  .table-active{
+    min-width: 100%;
+    width: 100%;
+    font-size: 0.8em;
+    margin: 15px 0 0 0;
+  }
+
+  .controls-table{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-feild{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .no-data-container{
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0 0 0;
+  }
+
+  .table-active th,
+  .table-active td {
+    padding: 8px 10px;
+  }
+
+  .label-input-container input{
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .history-section{
+    margin-top: 10px;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .table-active{
+    font-size: 0.75em;
+  }
+
+  .table-active th,
+  .table-active td {
+    padding: 6px 8px;
+  }
+
+  .form-feild{
+    grid-template-columns: 80px 1fr;
+    padding: 10px 12px;
+  }
+
+  .controls-table{
+    padding: 10px 12px;
+  }
+
+  .view-toggle-btn{
+    font-size: 0.9em;
+    padding: 10px 16px;
+  }
 }
